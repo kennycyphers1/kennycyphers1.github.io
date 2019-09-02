@@ -1,0 +1,351 @@
+<!doctype html>
+<html>
+<head>
+<title>My Curriculum Vitae</title>
+
+<style>
+
+body {
+  background-color: #fdfff5;
+  font-family: Verdana;
+}
+
+fieldset{
+  border: 2px solid blue;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+hr{
+  border: 1px dotted blue;
+}
+
+#container {
+  width: 1100px;
+  margin: auto;
+  background-color:  rgb(255,255,255,.05);
+  border-radius: 5px 5px 0px 0px; 
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+  color: #445566;
+  font-family: Georgia, Times, Serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h2 {
+  color: #445566;
+  padding: 0px;
+  font-size: 1.3em;
+}
+
+h3 {
+  color: #445566;
+  margin: 0px;
+}
+
+aside {
+  width: 330px;
+  height: 820px;
+  border: 1px solid #10889E;
+  float: left;
+  margin-left: 10px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#main {
+  width: 730px;
+  float: right;
+  margin-right: 10px;
+  line-height: 20px;
+  text-align: justify;
+}
+
+footer {
+  height: 50px;
+  background-color: #445566;
+  clear: both;
+  border-radius: 5px;
+}
+
+
+
+/*Form Styling Starts Here*/
+
+form { max-width:300px; margin:50px auto; }
+
+.feedback-input {
+  color:black;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid #10889E;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+}
+
+.feedback-input:focus { border:2px solid #CC4949; }
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
+}
+
+[type="submit"] {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  width: 100%;
+  background:#10889E;
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+[type="submit"]:hover { background:blue; }
+
+.legends{
+  line-height: 22px;
+  border-radius: 5px;
+  background-color: transparent;
+  border:2px solid #10889E;
+  box-sizing: border-box;
+  outline:0;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+}
+
+input:invalid {
+  box-shadow: 0 0 3px 1px red;
+}
+
+input:focus:invalid {
+  box-shadow: none;
+}
+
+</style>
+</head>
+
+
+<body>
+<div id='container'>
+
+  <h1>
+    <fieldset> <center>CURRICULUM VITAE</center>
+    <center>Emmanuel Kene (KennyHobz)</center>
+  </h1>
+    <center>Contact Address: Lagos,  Nigeria. 
+          Email: nneboemmanuel@gmail.com 
+          Tel: 070-32792424</center>
+    </fieldset>
+
+  
+
+    <hr>
+    <aside>
+        <center><img src= "https://res.cloudinary.com/kennyhobz-com/image/upload/v1566504131/My%20Photos/EMMA_PASSPORT_qixbfv.jpg" width="150" height="150">
+        <h3>EMMANUEL KENE</h3></center> 
+        <center><h3>Web Designer</h3></center>
+
+
+    <!-- Form Section Starts Here -->
+
+    <form id="form_id" action="#">
+    <center><h2>CONTACT ME HERE</h2> </center>
+  <fieldset class="legends">
+      <legend>Title<abbr title="This field is mandatory">*</abbr></legend>
+      <input type="radio" required name="title" id="r1" value="Mr"><label for="r1">Mr.</label>
+      <input type="radio" required name="title" id="r2" value="Ms"><label for="r2">Ms.</label>
+      <input type="radio" required name="title" id="r2" value="Ms"><label for="r2">Mrs.</label>
+      <input type="radio" required name="title" id="r2" value="Ms"><label for="r2">Dr.</label>
+      
+    </fieldset>
+  <input name="name" id="name" type="text" class="feedback-input" placeholder="Name" required="true" minlength="4"/>   
+  <input type="email" id="email" name="email" class="feedback-input" placeholder="Email" required="true"/>
+  <input name="name" type="text" class="feedback-input" placeholder="Subject of your Message" required="true" maxlength="50" minlength="10"/>
+  <textarea type="message" name="message" class="feedback-input" placeholder="Drop the body of your Message Here!" required="true" maxlength="500" minlength="20"></textarea>
+  <input type="submit" value="SUBMIT" onclick="submit_by_id()"/>
+
+</form>
+    <!-- Form Section Ends Here -->
+
+        
+    </aside>
+
+    <section id='main'>
+      <fieldset>
+        <h2>CAREER OBJECTIVE</h2>	
+        <p>
+          I am a versatile individual constantly seeking avenues that will allow further development of the knowledge gained during degree studies, work experienced, skill acquisition and volunteer opportunities. My aim is to add value to a world class organization whilst maximizing every opportunity for learning, success and growth. In my spare time I delight in erudite self-development. 
+        </p>
+      </fieldset>
+
+        <fieldset>
+        <h2>RELEVANT COURSEWORK</h2> 
+        <p>
+          Urban Design, Landscape Planning, Urban renewal, Advanced Regional Planning, Professional Practise,Recreation Planning, Master Plan Studio design, Population & Urbanization Studies, Urban Planning, Traffic and Transportation, Law of Contract & Tort, Introduction to Computer Science, Introduction to Entrepreneurship, Property Valuation, Computer Applications in Planning. 
+        </p>
+      </fieldset>
+      <fieldset>
+        <h2>PROFESSIONAL TRAININGS</h2> 
+        <p>
+          <ul>
+       <li> HSE Level 1(Award in Health & Safety at work).  (2015) </li>
+          <li>HSE Level 2(Risk Assessment Practical Application). (2015)</li>
+          <li>HSE Level 3(Award in Environmental Awareness). (2015) </li>
+          <li>Fire Safety & Risk Assessment. (2015)</li>
+            </ul> 
+        </p>
+
+
+        <h2>APTECH (2017)</h2>
+        <p>
+          <ul>
+          <li> Certificate of Proficiency In Software Management (CPISM).</li>
+          </ul>
+        </p> 
+        
+
+        <h2>AFRIHUB (2012)</h2>
+        <p>
+          <ul>
+          <li> Certificate of Proficiency in Universal Mandatory IT Training.</li>
+          </ul>
+        </p> 
+        </fieldset>
+
+        <fieldset>
+        <h2>RESEARCH WORK </h2>
+        <p> 
+        <ul>
+        <li> Assessment of Landscape Conditions of Recreational Parks in Enugu Urban, 2013.</li>
+         <li>Participant in Collection, Analysis and Collation of Data for 9th   Mile Corner Master Plan, Enugu, 2013.</li>
+      </ul>
+        </p>
+        </fieldset>
+
+        <fieldset>
+      <h2>WORK EXPERIENCES</h2>
+        <p><b> KENES COMPUTER TECHNOLOGY </b> <br>
+        <b> Web Designer: (March 2017 till date) </b> <br>
+        Job Description: <ul>
+        <li>Designing Websites for clients who have interest of taking their business online and creating web solutions for small businesses.</li>
+        </ul></p> 
+
+        <p><b>Digital Skills for Africa (Mind The Gap) </b> <br>
+<b>Trainer and On-boarder: (February 2017-March 2018) </b> <br>
+Job Description:<ul>
+<li>Training Corps members and youths on how to harness and tap into the numerous opportunities that exist in the digital world. And how to excel in the digitalized world.</li>
+<li>Teaching small businesses on how to give online presence to their business and steps to ensure that the world knows about their services.</li>
+</ul></p>
+ 
+<p><b>KPMG </b> <br>
+<b>Temporal Staff: Banking Industry Customer Satisfaction Survey (BICSS) (March-April 2016)</b> <br>
+Job Description:<ul>
+<li>Interviewing respondents on the level of satisfaction they (customers) get from the banks they are banking with.</li>
+ </ul></p>
+
+<p><b>Community Secondary Commercial School, Obot Akara LGA,Akwa-Ibom State (2014-2015) </b> <br>
+<b>Geography Teacher:</b> <br>
+Job Description: <ul>
+         <li>Applied appropriate teaching techniques that created understanding and enthusiasm amongst students.</li>
+         <li>Reviewed course content and materials on a regular basis</li>
+         <li>Updated course content and material when required to suit the leaning needs of the students.</li>
+         <li>Prepared tests and examinations and gave appropriate feedback on scores</li>
+         <li>Maintained records of Students progress and development.</li>
+         <li>Managed students’ behavior in the classroom and on school premises.</li>
+</ul></p>
+ 
+<p><b>Enugu State Housing Development Corporation (ESHDC), Town Planning Division (April-October 2012) </b> <br>
+<b>Industrial Trainee</b> <br>
+Job Description:<ul>
+         <li>Supervising and monitoring the development in the State owned Estates.</li>
+         <li>I made sure the developers followed required standards while building, making sure that they conform to town planning rules and regulations.</li>
+         <li>Coordination and supervision of casual labour day to day activities on site.</li>
+         <li>I also oversee the payment of outstanding fees by developers.</li>
+</ul></p>
+  </fieldset>
+
+<fieldset>
+<h2> EDUCATION </h2> 
+ <p><ul>
+       <b>University of Nigeria Nsukka (UNN) (2008-2013):</b>
+    <li>B.urp in Urban and Regional Planning (Second Class Honors).</li>      
+    <b>University of Nigeria Secondary School, Enugu Campus, Enugu (2003-2008):</b>
+    <li>Senior Secondary School Certificate (WASSCE)</li>
+    <b>University Primary School, Enugu Campus, Enugu (2000-2003):</b>
+    <li>First School Leaving Certificate (FSLC)</li>
+  </ul>
+  </p>
+</fieldset>
+
+  <fieldset>
+  <h2> SKILLS AND COMPETENCIES </h2>
+  <ul>
+    <b> COMPUTER/IT SKILL:</b> <li>I have knowledge of Microsoft Package (MS Word, MS Excel, and MS PowerPoint), which I use often when doing my assignments, personal write-ups, I also have great knowledge of the following programming languages; C, C++, Html & Css, Javascript, Php, SQL, etc. </li>
+         <b>TEAM PLAYING SKILL:</b> <li>Group work assessment with teammates undertaking a research work on creating a master plan for “9th Mile Corner, Enugu” which required collaboration in working towards a common target.</li>
+         <b>COMMUNICATION SKILL:</b> <li>I have excellent Verbal and Written communication skill. I Gave about 15minutes presentation followed by a question and answer section to an audience on Regional planning project: “Enugu East Regional Development Plan”.</li>
+         <b>TECHNICAL SKILLS:</b> <li>I am proficient in AutoCAD software, with experiences in Web design, blogging, PC Troubleshooting and maintenance, Software installation and configuration. </li>
+         <b>LEADERSHIP SKILLS:</b> <li>I have been involved at different levels of Leadership and was the Cyber Team Leadership in Higher Life Kings Church Int’l, Enugu.</li>
+         <b>EXCELLENT INTERPERSONAL SKILL:</b> <li>I have an excellent interpersonal skill which I was able to improve on in the course of my youth service.</li>
+         <b>ORGANIZATION SKILL:</b> <li>Effective administration skills, ability to work with minimal supervision, good problem solving initiative, Time and Events management skills.</li>
+         <b>ABILITY TO WORK UNDER PRESSURE AND DEADLINE:</b> <li>In the course of my National Youth Service as a Geography Teacher, I was given several scripts to mark in few days. I was able to complete it because I was so focused on it and wanted to achieve that goal.</li>
+    </fieldset>
+
+          <fieldset>
+         <h2> INTEREST: </h2>  
+         Surfing the internet, Researching, Reading and Travelling.
+       </fieldset>
+ 
+        <fieldset>
+        <h2> REFERENCES: </h2>
+        References are available on Request.
+        </fieldset>        
+
+
+
+
+    </section>
+
+    <footer>
+        
+    </footer>
+	
+</div> 
+
+
+
+
+    <script type="text/javascript">
+ 
+// Submit form with id function.
+function submit_by_id() {
+var name = document.getElementById("name").value;
+var email = document.getElementById("email").value;
+if (validation()) // Calling validation function
+{
+document.getElementById("form_id").submit(); //form submission
+alert(" Name : " + name + " n Email : " + email + " n Form Id : " + document.getElementById("form_id").getAttribute("id") + "nn Form Submitted Successfully......");
+}
+}
+ </script>
+</body>
+</html>
