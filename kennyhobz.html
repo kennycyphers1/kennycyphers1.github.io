@@ -168,21 +168,21 @@ input:focus:invalid {
 
     <!-- Form Section Starts Here -->
 
-    <form id="form_id" action="#">
+    <form>
     <center><h2>CONTACT ME HERE</h2> </center>
-  <fieldset class="legends">
+  <fieldset class="legends" id="selTitle">
       <legend>Title<abbr title="This field is mandatory">*</abbr></legend>
-      <input type="radio" required name="title" id="r1" value="Mr"><label for="r1">Mr.</label>
-      <input type="radio" required name="title" id="r2" value="Ms"><label for="r2">Ms.</label>
-      <input type="radio" required name="title" id="r2" value="Ms"><label for="r2">Mrs.</label>
-      <input type="radio" required name="title" id="r2" value="Ms"><label for="r2">Dr.</label>
+      <input type="radio" required name="title" value="Mr"><label for="r1">Mr.</label>
+      <input type="radio" required name="title" value="Ms"><label for="r2">Ms.</label>
+      <input type="radio" required name="title" value="Ms"><label for="r2">Mrs.</label>
+      <input type="radio" required name="title" value="Ms"><label for="r2">Dr.</label>
       
     </fieldset>
-  <input name="name" id="name" type="text" class="feedback-input" placeholder="Name" required="true" minlength="4"/>   
-  <input type="email" id="email" name="email" class="feedback-input" placeholder="Email" required="true"/>
-  <input name="name" type="text" class="feedback-input" placeholder="Subject of your Message" required="true" maxlength="50" minlength="10"/>
-  <textarea type="message" name="message" class="feedback-input" placeholder="Drop the body of your Message Here!" required="true" maxlength="500" minlength="20"></textarea>
-  <input type="submit" value="SUBMIT" onclick="submit_by_id()"/>
+  <input name="name" id="txtName" type="text" class="feedback-input" placeholder="Name" required="true" minlength="4"/>   
+  <input type="email" id="txtEmail" name="email" class="feedback-input" placeholder="Email" required="true"/>
+  <input name="subject" id="txtSubject" type="text" class="feedback-input" placeholder="Subject of your Message" required="true" maxlength="50" minlength="10"/>
+  <textarea type="message" name="message" id="msg" class="feedback-input" placeholder="Drop the body of your Message Here!" required="true" maxlength="500" minlength="20"></textarea>
+  <input type="submit" value="SUBMIT" id="bt" onclick="saveFile()"/>
 
 </form>
     <!-- Form Section Ends Here -->
@@ -336,16 +336,42 @@ Job Description:<ul>
 
     <script type="text/javascript">
  
-// Submit form with id function.
-function submit_by_id() {
-var name = document.getElementById("name").value;
-var email = document.getElementById("email").value;
-if (validation()) // Calling validation function
-{
-document.getElementById("form_id").submit(); //form submission
-alert(" Name : " + name + " n Email : " + email + " n Form Id : " + document.getElementById("form_id").getAttribute("id") + "nn Form Submitted Successfully......");
-}
-}
+// Submit form.
+        let saveFile = () => {
+      
+        // Get the data from each element on the form.
+        const title = document.getElementById('selTitle');
+        const name = document.getElementById('txtName');
+        const email = document.getElementById('txtEmail');
+        const subject = document.getElementById('txtSubject');
+        const msg = document.getElementById('msg');
+        
+        // This variable stores all the data.
+        let data = 
+            '\r Title: ' + title.value + ' \r\n ' +
+            'Name: ' + name.value + ' \r\n ' + 
+            'Email: ' + email.value + ' \r\n ' + 
+            'Subject: ' +subject.value + ' \r\n ' + 
+            'Message: ' + msg.value;
+        
+        // Convert the text to BLOB.
+        const textToBLOB = new Blob([data], { type: 'text/plain' });
+        const sFileName = 'formData.txt';    // The file to save the data.
+
+        let newLink = document.createElement("a");
+        newLink.download = sFileName;
+
+        if (window.webkitURL != null) {
+            newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+        }
+        else {
+            newLink.href = window.URL.createObjectURL(textToBLOB);
+            newLink.style.display = "none";
+            document.body.appendChild(newLink);
+        }
+
+        newLink.click(); 
+    }
  </script>
 </body>
 </html>
